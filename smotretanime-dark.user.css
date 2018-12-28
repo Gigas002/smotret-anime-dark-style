@@ -1,9 +1,13 @@
 /* ==UserStyle==
 @name        smotretanime-dark
+@namespace   Gigas002
 @version     0.0.1
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
+@updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css
 @license     WTFPL
-@author      h1royuki (https://userstyles.org/users/376750), Gigas002
+@author      Gigas002, h1royuki (https://userstyles.org/users/376750)
+==/UserStyle== */
+
 /* Menu */
 .white {
     position: fixed !important;

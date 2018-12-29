@@ -2,6 +2,10 @@
 
 Originally, this project is just a [copy](https://userstyles.org/styles/135779/dark-style-anime-365) of archived style from userstyles under WTFPL license for [smotretanime](https://smotretanime.ru/) website (previously also known as smotret-anime.ru and anime365.ru. I’m not the original’s author). Now I decided to move this project to GitHub and give it some development.
 
+## Current version
+
+Current version is 0.0.3-alpha. It’s safe to use style at the moment, but there’s still some stuff I want to fix/add before releasing stable 1.0.0 version. 
+
 ## Installation
 
 Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style:

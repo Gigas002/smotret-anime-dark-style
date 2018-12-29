@@ -4,9 +4,8 @@ Originally, this project is just a [copy](https://userstyles.org/styles/135779/d
 
 ## Installation
 
-Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style using one of these methods:
-- Install the [usercss](https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css) which supports automatic updates and customization.
-- [Install manually from GitHub](https://github.com/Gigas002/smotret-anime-dark-style/blob/master/smotretanime-dark.css) with no customization, but useful for development.
+Install [Stylus](https://add0n.com/stylus.html) for either [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) or [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) and then install the style:
+Install the [usercss](https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css) which supports automatic updates and customization.
 
 ## Contribution
 

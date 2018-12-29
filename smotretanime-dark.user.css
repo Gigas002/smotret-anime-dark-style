@@ -55,6 +55,7 @@
     }
 
     .m-new-episode.collection-item.avatar {
+        background: #323340;
         background: rgba(32, 33, 40, 0);
     }
 
@@ -101,6 +102,7 @@
     }
 
     nav .right a, .button-collapse {
+        color: #ffffff;
         color: rgba(255, 255, 255, 1.0) !important;
     }
 
@@ -162,10 +164,12 @@
     }
 
     nav ul li.active {
+        background-color: #303040;
         background-color: rgba(30, 30, 40, 0.2);
     }
 
     .side-nav a:hover {
+        background-color: #232230;
         background-color: rgba(23, 22, 30, 1);
     }
 
@@ -194,11 +198,14 @@
     }
 
     .light-blue.darken-4 {
+        background-color: rgb(100,97,95);
         background-color: rgba(100, 97, 95, 0) !important;
     }
 
     .vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus, .vjs-default-skin .vjs-big-play-button {
+        background: rgb(33, 32, 50);
         background: rgba(33, 32, 50, 0.7);
+        border-color: rgb(0, 0, 0);
         border-color: rgba(0, 0, 0, 0);
     }
 
@@ -211,6 +218,7 @@
     }
 
     .m-comments.collection.with-header .collection-item {
+        border-bottom: 1px solid rgb(25, 28, 32) !important;
         border-bottom: 1px solid rgba(25, 28, 32, 0.7) !important;
     }
 
@@ -220,7 +228,8 @@
 
     .collection.with-header .collection-header {
         background-color: rgb(42, 40, 50);
-        border-bottom: 0px solid rgba(0, 0, 0, 0.07);
+        border-bottom: 0 solid rgb(0, 0, 0);
+        border-bottom: 0 solid rgba(0, 0, 0, 0.07);
         padding: 5px 20px;
     }
 
@@ -253,6 +262,7 @@
     }
 
     .highlight > tbody > tr:hover {
+        background-color: rgb(30, 30, 40);
         background-color: rgba(30, 30, 40, 0.6);
     }
 
@@ -265,7 +275,8 @@
     }
 
     .ccs-sugg .btn.green, .ccs-sugg .btn.red {
-        background-color: rgba(40, 40, 50) !important;
+        background-color: rgb(40, 40, 50);
+        background-color: rgba(40, 40, 50, 0) !important;
     }
 
         .ccs-sugg .btn.green.checked, .ccs-sugg .btn.red.checked {
@@ -281,7 +292,7 @@
         }
 
     .m-comment.m-comment-new.collection-item.avatar .circle {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .divider {
@@ -297,8 +308,8 @@
     }
 
         .container .row {
-            margin-left: 0rem;
-            margin-right: 0rem;
+            margin-left: 0;
+            margin-right: 0;
         }
 
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
@@ -316,8 +327,8 @@
     }
 
     .section {
-        padding-top: 0.3rem;
-        padding-bottom: 0rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .ccs-genre-op .switch label input[type=checkbox]:checked + .level, .ccs-genre-op .switch label input[type=checkbox]:checked + .lever {
@@ -329,6 +340,7 @@
         }
 
     .switch_label_off.selected, .switch_label_on.selected {
+        color: rgb(235, 235, 235);
         color: rgba(235, 235, 235, 0.87);
     }
 
@@ -365,11 +377,12 @@
     }
 
     .page-footer {
-        margin-top: 0px;
-        padding-top: 0px;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .input-field input[type=text]:focus, .input-field input[type=password]:focus {
+        background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.3);
         border-radius: 3px;
         height: 44px;
@@ -377,6 +390,7 @@
 
     .input-field input[type=text], .input-field input[type=password] {
         box-shadow: none !important;
+        background: rgb(24, 24, 27);
         background: rgba(24, 24, 27, 0.5);
         height: 44px;
         font-size: 16px;
@@ -444,6 +458,7 @@
 
     .ccs-wrap {
         box-shadow: none !important;
+        background: rgb(229, 229, 229);
         background: rgba(229, 229, 229, 0.1);
         height: 44px;
         font-size: 16px;
@@ -460,11 +475,13 @@
     }
 
     .ccs-input {
+        background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.0) !important;
     }
 
     #UsersRates_episodes {
         box-shadow: none !important;
+        background: rgb(24, 24, 27);
         background: rgba(24, 24, 27, 0.5);
         height: 44px;
         font-size: 16px;
@@ -494,6 +511,7 @@
         padding-top: 10px;
         margin-bottom: 0;
         box-shadow: none !important;
+        background: rgb(24, 24, 27);
         background: rgba(24, 24, 27, 0.5);
         font-size: 16px;
         font-weight: 400;
@@ -505,6 +523,7 @@
 
     .input-field textarea.materialize-textarea {
         box-shadow: none !important;
+        background: #242427;
         background: rgba(24, 24, 27, 0.5);
         font-size: 16px;
         font-weight: 400;
@@ -525,6 +544,7 @@
     }
 
     .input-field textarea.materialize-textarea:focus, .m-comment-new .input-field textarea.materialize-textarea:focus {
+        background: #000000;
         background: rgba(0, 0, 0, 0.3) !important;
     }
 
@@ -541,7 +561,7 @@
     }
 
     .grey.darken-4 {
-        border-bottom: 0px solid #35363a !important;
+        border-bottom: 0 solid #35363a !important;
         transition: 0.4s;
         background-color: #1b1d23 !important;
     }
@@ -552,7 +572,7 @@
     }
 
     .vjs-default-skin .vjs-volume-level {
-        top: 0.0rem !important;
+        top: 0 !important;
         height: 0.55em !important;
     }
 
@@ -568,7 +588,7 @@
         font-size: 20px;
     }
 
-    input::placeholder, .col.s8.m12 > .no-margin-top.no-margin-bottom > li {
+    ::-webkit-input-placeholder, .col.s8.m12 > .no-margin-top.no-margin-bottom > li {
         color: rgb(124, 126, 140);
     }
 

@@ -1,10 +1,14 @@
 # SMOTRETANIME.RU DARK STYLE
 
-Originally, this project is just a [copy](https://userstyles.org/styles/135779/dark-style-anime-365) of archived style from userstyles under WTFPL license for [smotretanime](https://smotretanime.ru/) website (previously also known as smotret-anime.ru and anime365.ru. I’m not the original’s author). Now I decided to move this project to GitHub and give it some development.
+Currently, this project is a slightly updated [copy](https://userstyles.org/styles/135779/dark-style-anime-365) of archived style from userstyles for [smotretanime.ru](https://smotretanime.ru/) (previously also known as smotret-anime.ru and anime365.ru) and hentai365 (find link by yourself, OK?).
 
 ## Current version
 
-Current version is 0.0.3-alpha. It’s safe to use style at the moment, but there’s still some stuff I want to fix/add before releasing stable 1.0.0 version. 
+Current version is 0.0.4-alpha. It’s safe to use style at the moment, but there’s still some stuff I want to fix/add before releasing stable 1.0.0 version. 
+
+## Screenshots
+
+//todo
 
 ## Installation
 

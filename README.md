@@ -1,14 +1,11 @@
-# SMOTRETANIME.RU DARK STYLE
+# SMOTRET-ANIME-365.RU DARK STYLE
 
-Currently, this project is a slightly updated [copy](https://userstyles.org/styles/135779/dark-style-anime-365) of archived style from userstyles for [smotret-anime-365.ru](https://smotret-anime-365.ru/) (previously also known as smotretanime.ru, smotret-anime.ru and anime365.ru) and hentai365 (find that link by yourself, OK?).
+This project is a slightly updated [copy](https://userstyles.org/styles/135779/dark-style-anime-365) of archived style from userstyles (also used [this version](https://userstyles.org/styles/172140/365-dark-theme) after **0.0.5-alpha**) for [smotret-anime-365.ru](https://smotret-anime-365.ru/) (previously also known as smotretanime.ru, smotret-anime.ru and anime365.ru) and [hentai365.ru](https://hentai365.ru/).
+Starting from **1.0.0 release** added option to choose your own background image. After you put your link to `url()` statement in style options, just re-enable the style.
 
 ## Current version
 
-Current version is 0.0.5-alpha. It’s safe to use style at the moment, but there’s still some stuff I want to fix/add before releasing stable 1.0.0 version. 
-
-## Screenshots
-
-//todo
+[![Release](https://img.shields.io/github/release/Gigas002/smotret-anime-dark-style.svg)](https://github.com/Gigas002/smotret-anime-dark-style/releases/latest)
 
 ## Installation
 

@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name        smotretanime-dark
 @namespace   Gigas002
-@version     1.0.0
+@version     1.0.1
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css
 @license     WTFPL (http://www.wtfpl.net/)
-@author      Gigas002, h1royuki (?-2018)
+@author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
 @advanced dropdown bg-selected "Background image" {
   cst "Custom" <<<EOT
   var(--bg-custom, none) EOT;
@@ -34,15 +34,13 @@
 ==/UserStyle== */
 
 @-moz-document domain("smotret-anime-365.ru"), domain("hentai365.ru") {
-    :root 
-    {
+    :root {
         --bg-custom: /*[[bg-custom]]*/;
         --bg-selected: /*[[bg-selected]]*/;
         --bg-attachment: /*[[bg-attachment]]*/;
     }
     /* Background */
-    .full-background 
-    {
+    .full-background {
         background-color: rgb(22, 21, 26) !important;
         background-image: var(--bg-selected) !important;
         background-clip: border-box !important;
@@ -53,9 +51,9 @@
         bottom: 0;
     }
     /* Logo */
-    .brand-logo 
-    {
-        background: url(https://i.imgur.com/1Zwfb4w.png) center 6px no-repeat;
+    .brand-logo {
+        /* Placed the logo in repo/Image/Logo.png */
+        background: url(https://bit.ly/2KuIB1q) center 6px no-repeat;
         background-size: 88%;
     }
     /* Ads */
@@ -66,13 +64,11 @@
     div.card-content.m-new-episodes__description,
     div.card-content.m-news-box-fix.m-news-box-fix-right-column.ad-placement,
     .m-comments.collection .collection-item.avatar p, .m-comments.collection p,
-    div.card-content.m-left-vk-group 
-    {
+    div.card-content.m-left-vk-group {
         display: none;
     }
     /* Notifications */
-    div.onesignal-bell-launcher-button 
-    {
+    div.onesignal-bell-launcher-button {
         display: none;
     }
     /* Main body part */
@@ -80,57 +76,56 @@
     .card-content,
     .m-custom-tabs,
     input.ccs-input,
-    .vjs-default-skin .vjs-control-bar 
-    {
+    .vjs-default-skin .vjs-control-bar {
         background-color: rgb(53, 54, 58);
         color: rgb(255, 255, 255);
     }
-    div.m-new-episode.collection-item.avatar 
-    {
+
+    div.m-new-episode.collection-item.avatar {
         background-color: rgb(45, 45, 47);
     }
+
     .white,
     div.card-panel,
     .orange,
-    .qq-uploader 
-    {
+    .qq-uploader {
         background-color: rgb(53, 54, 58) !important;
     }
 
-    .grey.darken-4 
-    {
+    .grey.darken-4 {
         background-color: rgb(53, 54, 58) !important;
         border-bottom: 1px solid rgb(53, 54, 58);
     }
+
     .green.darken-4,
     .orange.accent-4,
     .orange.darken-4,
     .m-block-title a.btn,
-    .vjs-default-skin .vjs-slider 
-    {
+    .vjs-default-skin .vjs-slider {
         background-color: rgb(64, 65, 70) !important;
     }
-    .btn.green.darken-4:hover 
-    {
+
+    .btn.green.darken-4:hover {
         background-color: rgb(43, 43, 46) !important;
     }
-    .yellow-text.text-darken-4 
-    {
+
+    .yellow-text.text-darken-4 {
         color: rgb(239, 245, 237) !important;
     }
-    div.m-series-score__title 
-    {
+
+    div.m-series-score__title {
         color: rgb(178, 178, 178);
     }
-    .grey-text.text-darken-2 
-    {
+
+    .grey-text.text-darken-2 {
         color: rgb(255, 255, 255) !important;
     }
+
     nav ul.right a,
-    .button-collapse 
-    {
+    .button-collapse {
         color: rgba(255, 255, 255, 1.0) !important;
     }
+
     a,
     h1,
     h2,
@@ -147,158 +142,158 @@
     .collection.with-header .m-comment.collection-item.avatar,
     .dropdown-content li > a,
     .dropdown-content li > span,
-    .select-wrapper span.caret 
-    {
+    .select-wrapper span.caret {
         color: rgb(255, 255, 255) !important;
     }
-    p 
-    {
+
+    p {
         color: rgb(255, 255, 255);
     }
+
     div.m-small-title {
         color: rgb(178, 178, 178)
     }
 
     .m-select-translation-type .btn.active,
-    .btn.orange.accent-4:hover 
-    {
+    .btn.orange.accent-4:hover {
         background-color: rgb(43, 43, 46) !important;
     }
-    .vjs-default-skin .vjs-volume-level
-    {
+
+    .vjs-default-skin .vjs-volume-level {
         background-color: rgb(255, 255, 255);
     }
+
     .m-select-view a.active,
-    .m-select-translation-variant .current 
-    {
+    .m-select-translation-variant .current {
         color: rgb(101, 100, 98) !important;
     }
-    [type="checkbox"].filled-in:checked + label::after 
-    {
+
+    [type="checkbox"].filled-in:checked + label::after {
         border: 2px solid rgb(116, 125, 122);
         background-color: rgb(111, 116, 116);
     }
-    .vjs-default-skin .vjs-play-progress 
-    {
+
+    .vjs-default-skin .vjs-play-progress {
         background-color: rgb(212, 212, 212);
     }
+
     nav ul li:hover,
     nav ul li.active,
-    nav 
-    {
+    nav {
         background-color: rgba(54, 55, 53, 1.0);
     }
+
     .dropdown-content li:hover,
     .dropdown-content li.active,
-    .dropdown-content li.selected 
-    {
+    .dropdown-content li.selected {
         background-color: rgba(38, 40, 38, 0.5);
     }
+
     nav ul li.active,
     nav .dropdown-content li.active,
-    nav .dropdown-content li:hover 
-    {
+    nav .dropdown-content li:hover {
         background-color: rgba(51, 54, 51, 0.5);
     }
-    .side-nav a:hover
-    {
+
+    .side-nav a:hover {
         background-color: rgba(38, 38, 38, 1);
     }
+
     .dropdown-content,
-    .side-nav 
-    {
+    .side-nav {
         background-color: rgb(50, 50, 50);
     }
+
     .m-new-episodes,
-    .m-embed-code textarea 
-    {
+    .m-embed-code textarea {
         background: rgb(45, 45, 47);
     }
-    .m-custom-tabs__tab_active 
-    {
+
+    .m-custom-tabs__tab_active {
         border-bottom: 2px solid rgb(255, 255, 255);
     }
+
     .orange-text.text-darken-4,
-    .purple-text.text-darken-4 
-    {
+    .purple-text.text-darken-4 {
         color: rgb(219, 223, 230) !important;
     }
+
     .ccs-sugges .dropdown-content li,
-    .m-comment-new .input-field 
-    {
+    .m-comment-new .input-field {
         color: rgb(255, 255, 255);
     }
-    .tag 
-    {
+
+    .tag {
         background-color: rgb(100, 97, 95);
     }
-    .light-blue.darken-4 
-    {
+
+    .light-blue.darken-4 {
         background-color: rgba(100, 97, 95, 0) !important;
     }
+
     .vjs-default-skin:hover .vjs-big-play-button,
     .vjs-default-skin .vjs-big-play-button:focus,
-    .vjs-default-skin .vjs-big-play-button 
-    {
+    .vjs-default-skin .vjs-big-play-button {
         background: rgb(81, 82, 85);
         border-color: rgb(81, 82, 85);
     }
-    .collection.with-header .m-comment.collection-item.avatar 
-    {
+
+    .collection.with-header .m-comment.collection-item.avatar {
         background-color: rgb(45, 45, 47);
     }
-    .collection .collection-item.m-comment 
-    {
+
+    .collection .collection-item.m-comment {
         border-bottom: 1px solid rgb(62, 63, 67);
     }
-    .m-comments.collection.with-header .collection-item 
-    {
+
+    .m-comments.collection.with-header .collection-item {
         border-bottom: 1px solid rgb(32, 33, 35);
     }
-    .m-comments.collection.with-header .collection-item 
-    {
+
+    .m-comments.collection.with-header .collection-item {
         background-color: rgb(53, 54, 58);
     }
-    .collection.with-header .collection-header 
-    {
+
+    .collection.with-header .collection-header {
         background-color: rgb(53, 54, 58);
         border-bottom: 1px solid rgb(53, 54, 58);
         box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.6);
         padding: 5px 20px;
     }
-    .m-comments 
-    {
+
+    .m-comments {
         background: rgb(32, 33, 35);
     }
-    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .background 
-    {
+
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .background {
         fill: rgb(66, 67, 70);
     }
-    .btn-floating 
-    {
+
+    .btn-floating {
         background-color: rgb(88, 91, 94);
     }
-    .btn-floating:hover 
-    {
-        background-color: rgb(70, 70, 70);
-    }
-    .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before 
-    {
+
+        .btn-floating:hover {
+            background-color: rgb(70, 70, 70);
+        }
+
+    .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {
         color: rgb(93, 91, 93);
     }
+
     .m-group-pop-box,
-    .m-pop-box 
-    {
+    .m-pop-box {
         background: rgb(74, 74, 74);
     }
-    .m-moment__play-button.material-icons 
-    {
+
+    .m-moment__play-button.material-icons {
         color: rgb(93, 91, 93);
     }
-    table.highlight > tbody > tr:hover 
-    {
+
+    table.highlight > tbody > tr:hover {
         background-color: rgb(46, 46, 46);
     }
+
     .input-field input:not([type]):focus:not([readonly]),
     .input-field input[type=text]:focus:not([readonly]),
     .input-field input[type=password]:focus:not([readonly]),
@@ -311,11 +306,11 @@
     .input-field input[type=tel]:focus:not([readonly]),
     .input-field input[type=number]:focus:not([readonly]),
     .input-field input[type=search]:focus:not([readonly]),
-    .input-field textarea.materialize-textarea:focus:not([readonly]) 
-    {
+    .input-field textarea.materialize-textarea:focus:not([readonly]) {
         border-bottom: 1px solid rgb(93, 94, 94);
         box-shadow: 0 1px 0 0 rgb(91, 91, 94);
     }
+
     input[type=text]:focus:not([readonly]) + label:not(.md-input),
     input[type=password]:focus:not([readonly]) + label:not(.md-input),
     input[type=email]:focus:not([readonly]) + label:not(.md-input),
@@ -326,112 +321,111 @@
     input[type=tel]:focus:not([readonly]) + label:not(.md-input),
     input[type=number]:focus:not([readonly]) + label:not(.md-input),
     input[type=search]:focus:not([readonly]) + label:not(.md-input),
-    textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input) 
-    {
+    textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input) {
         color: rgb(91, 93, 94);
     }
-    .ccs-chip.chip 
-    {
+
+    .ccs-chip.chip {
         background-color: rgb(123, 123, 123);
     }
-    .ccs-chip-field 
-    {
+
+    .ccs-chip-field {
         background-color: rgb(86, 86, 86);
     }
+
     .ccs-sugg .btn.green,
-    .ccs-sugg .btn.red 
-    {
+    .ccs-sugg .btn.red {
         background-color: rgb(130, 130, 130) !important;
     }
-    .ccs-sugg .btn.green.checked,
-    .ccs-sugg .btn.red.checked 
-    {
-        background-color: rgb(74, 74, 74) !important;
-    }
-    .progress 
-    {
+
+        .ccs-sugg .btn.green.checked,
+        .ccs-sugg .btn.red.checked {
+            background-color: rgb(74, 74, 74) !important;
+        }
+
+    .progress {
         background-color: rgb(75, 77, 82);
     }
-    .progress .indeterminate 
-    {
-        background-color: rgb(123, 126, 135);
-    }
-    .m-comment.m-comment-new.collection-item.avatar .circle 
-    {
+
+        .progress .indeterminate {
+            background-color: rgb(123, 126, 135);
+        }
+
+    .m-comment.m-comment-new.collection-item.avatar .circle {
         margin-top: 0;
     }
-    .divider 
-    {
+
+    .divider {
         background-color: rgb(65, 65, 65);
     }
-    .m-embed-code-link 
-    {
+
+    .m-embed-code-link {
         border-bottom: 1px dotted rgb(176, 177, 171);
     }
-    div.m-comment.m-comment-new.collection-item.avatar 
-    {
+
+    div.m-comment.m-comment-new.collection-item.avatar {
         background-color: rgb(43, 43, 43);
         box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.6);
     }
-    .container .row 
-    {
+
+    .container .row {
         margin-left: 0;
         margin-right: 0;
     }
+
     nav,
     nav .nav-wrapper i,
     nav a.button-collapse,
-    nav a.button-collapse i 
-    {
+    nav a.button-collapse i {
         height: 58px;
         line-height: 58px;
     }
-    nav .dropdown-content li > a,
-    nav .dropdown-content li > span 
-    {
-        font-size: 15px;
-        padding: 14px 10px;
-    }
-    div.card-content.empty-msg 
-    {
+
+        nav .dropdown-content li > a,
+        nav .dropdown-content li > span {
+            font-size: 15px;
+            padding: 14px 10px;
+        }
+
+    div.card-content.empty-msg {
         padding: 15px;
     }
-    .section 
-    {
+
+    .section {
         padding-top: 1rem;
         padding-bottom: 0;
     }
+
     .ccs-genre-op .switch label input[type=checkbox]:checked + .level,
-    .ccs-genre-op .switch label input[type=checkbox]:checked + .lever 
-    {
+    .ccs-genre-op .switch label input[type=checkbox]:checked + .lever {
         background-color: rgb(89, 87, 92);
     }
-    .ccs-genre-op .switch label input[type=checkbox]:checked + .lever::after 
-    {
-        background-color: rgb(65, 66, 67);
-    }
-    .switch_label_off.selected, .switch_label_on.selected 
-    {
+
+        .ccs-genre-op .switch label input[type=checkbox]:checked + .lever::after {
+            background-color: rgb(65, 66, 67);
+        }
+
+    .switch_label_off.selected, .switch_label_on.selected {
         color: rgba(235, 235, 235, 0.87);
     }
-    .m-alert-success 
-    {
+
+    .m-alert-success {
         border-color: rgb(65, 67, 72);
     }
-    .spinner-blue 
-    {
+
+    .spinner-blue {
         border-color: rgb(224, 219, 227);
     }
-    .spinner-red 
-    {
+
+    .spinner-red {
         border-color: rgb(150, 150, 157);
     }
-    .spinner-yellow 
-    {
+
+    .spinner-yellow {
         border-color: rgb(76, 76, 77);
     }
-    .spinner-green 
-    {
+
+    .spinner-green {
         border-color: rgb(0, 0, 0);
     }
 }

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotretanime-dark
 @namespace   Gigas002
-@version     1.0.1
+@version     1.0.2
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css
@@ -165,8 +165,11 @@
 
     .m-select-view a.active,
     .m-select-translation-variant .current {
+        color: rgb(255, 255, 255) !important;
+                                           }
+    .m-select-translation-variant a {
         color: rgb(101, 100, 98) !important;
-    }
+                                    }
 
     [type="checkbox"].filled-in:checked + label::after {
         border: 2px solid rgb(116, 125, 122);

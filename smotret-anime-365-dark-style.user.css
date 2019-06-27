@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name        smotretanime-dark
+@name        smotret-anime-365-dark-style
 @namespace   Gigas002
 @version     1.0.3
-@homepageURL https://github.com/Gigas002/smotret-anime-dark-style
-@supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
-@updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/smotretanime-dark.user.css
+@homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
+@supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
+@updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/smotret-anime-365-dark-style.user.css
 @license     WTFPL (http://www.wtfpl.net/)
 @author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
 @advanced dropdown bg-selected "Background image" {
@@ -54,6 +54,9 @@
         background: url(https://bit.ly/2Zbn81G) center 6px no-repeat;
         background-size: 88%;
     }
+
+    /* todo logo for hentai365.ru */
+
     /* Ads */
     .m-news-box-fix,
     div.m-news-box-fix-1-inner,

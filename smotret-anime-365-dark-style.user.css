@@ -33,12 +33,20 @@
 @preprocessor uso
 ==/UserStyle== */
 
-@-moz-document domain("smotret-anime-365.ru"), domain("hentai365.ru") {
+@-moz-document domain("smotret-anime-365.ru"),
+domain("hentai365.ru") {
     :root {
-        --bg-custom: /*[[bg-custom]]*/;
-        --bg-selected: /*[[bg-selected]]*/;
-        --bg-attachment: /*[[bg-attachment]]*/;
+        --bg-custom:
+            /*[[bg-custom]]*/
+        ;
+        --bg-selected:
+            /*[[bg-selected]]*/
+        ;
+        --bg-attachment:
+            /*[[bg-attachment]]*/
+        ;
     }
+
     /* Background */
     .full-background {
         background-color: rgb(22, 21, 26) !important;
@@ -48,6 +56,7 @@
         background-attachment: var(--bg-attachment) !important;
         /*[[bg-options]]*/
     }
+
     /* Logo */
     .brand-logo {
         /* Placed the logo in repo/Image/Logo.png */
@@ -64,14 +73,17 @@
     div.card-content.m-news-box-fix.m-news-box-fix-1,
     div.card-content.m-new-episodes__description,
     div.card-content.m-news-box-fix.m-news-box-fix-right-column.ad-placement,
-    .m-comments.collection .collection-item.avatar p, .m-comments.collection p,
+    .m-comments.collection .collection-item.avatar p,
+    .m-comments.collection p,
     div.card-content.m-left-vk-group {
         display: none;
     }
+
     /* Notifications */
     div.onesignal-bell-launcher-button {
         display: none;
     }
+
     /* Main body part */
     .card,
     .card-content,
@@ -141,8 +153,8 @@
     .m-comment-author-name,
     .orange-text.text-lighten-3,
     .collection.with-header .m-comment.collection-item.avatar,
-    .dropdown-content li > a,
-    .dropdown-content li > span,
+    .dropdown-content li>a,
+    .dropdown-content li>span,
     .select-wrapper span.caret {
         color: rgb(255, 255, 255) !important;
     }
@@ -173,7 +185,7 @@
         color: rgb(101, 100, 98) !important;
     }
 
-    [type="checkbox"].filled-in:checked + label::after {
+    [type="checkbox"].filled-in:checked+label::after {
         border: 2px solid rgb(116, 125, 122);
         background-color: rgb(111, 116, 116);
     }
@@ -278,9 +290,9 @@
         background-color: rgb(88, 91, 94);
     }
 
-        .btn-floating:hover {
-            background-color: rgb(70, 70, 70);
-        }
+    .btn-floating:hover {
+        background-color: rgb(70, 70, 70);
+    }
 
     .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {
         color: rgb(93, 91, 93);
@@ -295,7 +307,7 @@
         color: rgb(93, 91, 93);
     }
 
-    table.highlight > tbody > tr:hover {
+    table.highlight>tbody>tr:hover {
         background-color: rgb(46, 46, 46);
     }
 
@@ -316,17 +328,17 @@
         box-shadow: 0 1px 0 0 rgb(91, 91, 94);
     }
 
-    input[type=text]:focus:not([readonly]) + label:not(.md-input),
-    input[type=password]:focus:not([readonly]) + label:not(.md-input),
-    input[type=email]:focus:not([readonly]) + label:not(.md-input),
-    input[type=url]:focus:not([readonly]) + label:not(.md-input),
-    input[type=time]:focus:not([readonly]) + label:not(.md-input),
-    input[type=date]:focus:not([readonly]) + label:not(.md-input),
-    input[type=datetime-local]:focus:not([readonly]) + label:not(.md-input),
-    input[type=tel]:focus:not([readonly]) + label:not(.md-input),
-    input[type=number]:focus:not([readonly]) + label:not(.md-input),
-    input[type=search]:focus:not([readonly]) + label:not(.md-input),
-    textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input) {
+    input[type=text]:focus:not([readonly])+label:not(.md-input),
+    input[type=password]:focus:not([readonly])+label:not(.md-input),
+    input[type=email]:focus:not([readonly])+label:not(.md-input),
+    input[type=url]:focus:not([readonly])+label:not(.md-input),
+    input[type=time]:focus:not([readonly])+label:not(.md-input),
+    input[type=date]:focus:not([readonly])+label:not(.md-input),
+    input[type=datetime-local]:focus:not([readonly])+label:not(.md-input),
+    input[type=tel]:focus:not([readonly])+label:not(.md-input),
+    input[type=number]:focus:not([readonly])+label:not(.md-input),
+    input[type=search]:focus:not([readonly])+label:not(.md-input),
+    textarea.materialize-textarea:focus:not([readonly])+label:not(.md-input) {
         color: rgb(91, 93, 94);
     }
 
@@ -343,18 +355,18 @@
         background-color: rgb(130, 130, 130) !important;
     }
 
-        .ccs-sugg .btn.green.checked,
-        .ccs-sugg .btn.red.checked {
-            background-color: rgb(74, 74, 74) !important;
-        }
+    .ccs-sugg .btn.green.checked,
+    .ccs-sugg .btn.red.checked {
+        background-color: rgb(74, 74, 74) !important;
+    }
 
     .progress {
         background-color: rgb(75, 77, 82);
     }
 
-        .progress .indeterminate {
-            background-color: rgb(123, 126, 135);
-        }
+    .progress .indeterminate {
+        background-color: rgb(123, 126, 135);
+    }
 
     .m-comment.m-comment-new.collection-item.avatar .circle {
         margin-top: 0;
@@ -386,11 +398,11 @@
         line-height: 58px;
     }
 
-        nav .dropdown-content li > a,
-        nav .dropdown-content li > span {
-            font-size: 15px;
-            padding: 14px 10px;
-        }
+    nav .dropdown-content li>a,
+    nav .dropdown-content li>span {
+        font-size: 15px;
+        padding: 14px 10px;
+    }
 
     div.card-content.empty-msg {
         padding: 15px;
@@ -401,16 +413,17 @@
         padding-bottom: 0;
     }
 
-    .ccs-genre-op .switch label input[type=checkbox]:checked + .level,
-    .ccs-genre-op .switch label input[type=checkbox]:checked + .lever {
+    .ccs-genre-op .switch label input[type=checkbox]:checked+.level,
+    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever {
         background-color: rgb(89, 87, 92);
     }
 
-        .ccs-genre-op .switch label input[type=checkbox]:checked + .lever::after {
-            background-color: rgb(65, 66, 67);
-        }
+    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever::after {
+        background-color: rgb(65, 66, 67);
+    }
 
-    .switch_label_off.selected, .switch_label_on.selected {
+    .switch_label_off.selected,
+    .switch_label_on.selected {
         color: rgba(235, 235, 235, 0.87);
     }
 

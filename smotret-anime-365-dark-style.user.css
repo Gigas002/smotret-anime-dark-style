@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.4
+@version     1.0.5
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/smotret-anime-365-dark-style.user.css
@@ -33,7 +33,7 @@
 @preprocessor uso
 ==/UserStyle== */
 
-@-moz-document domain("smotret-anime-365.ru"),
+@-moz-document domain("smotret-anime.online"),
 domain("hentai365.ru") {
     :root {
         --bg-custom:

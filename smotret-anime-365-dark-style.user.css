@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.5
+@version     1.0.6
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
-@updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/smotret-anime-365-dark-style.user.css
 @license     WTFPL (http://www.wtfpl.net/)
 @author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
 @advanced dropdown bg-selected "Background image" {
@@ -60,29 +59,11 @@ domain("hentai365.ru") {
     /* Logo */
     .brand-logo {
         /* Placed the logo in repo/Image/Logo.png */
-        background: url(https://bit.ly/2Zbn81G) center 6px no-repeat;
+        background: url(https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/Images/Logo.png) center 6px no-repeat;
         background-size: 88%;
     }
 
     /* todo logo for hentai365.ru */
-
-    /* Ads */
-    .m-news-box-fix,
-    div.m-news-box-fix-1-inner,
-    div.card-content.hide-on-small-and-down.m-news-box-fix,
-    div.card-content.m-news-box-fix.m-news-box-fix-1,
-    div.card-content.m-new-episodes__description,
-    div.card-content.m-news-box-fix.m-news-box-fix-right-column.ad-placement,
-    .m-comments.collection .collection-item.avatar p,
-    .m-comments.collection p,
-    div.card-content.m-left-vk-group {
-        display: none;
-    }
-
-    /* Notifications */
-    div.onesignal-bell-launcher-button {
-        display: none;
-    }
 
     /* Main body part */
     .card,
@@ -445,5 +426,9 @@ domain("hentai365.ru") {
 
     .spinner-green {
         border-color: rgb(0, 0, 0);
+    }
+
+    .tooltipped-native:hover:after {
+        margin-bottom: -40px;
     }
 }

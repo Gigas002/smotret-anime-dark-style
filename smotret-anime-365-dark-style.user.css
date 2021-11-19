@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.7
+@version     1.0.8
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -107,6 +107,8 @@ domain("hentai365.ru") {
     /* todo logo for hentai365.ru */
 
     /* Main body part */
+    h2,
+    h4,
     .m-catalog-search,
     .collection.with-header .collection-header,
     .m-new-episode .line-1 a,
@@ -116,6 +118,7 @@ domain("hentai365.ru") {
     .m-block-title a.btn,
     .green.darken-4,
     .card .card-content h1,
+    .card .card-content .h2,
     .orange-text.text-lighten-3,
     .white-text,
     .m-moment__title a,
@@ -137,7 +140,13 @@ domain("hentai365.ru") {
     .m-series-score__value.green-text,
     .card-content h3,
     .m-translation-view .line-1 a,
-    .m-translation-view .line-2 a {
+    .m-translation-view .line-2 a,
+    .m-select-sibling-episode .btn,
+    .m-comment-author-name a,
+    .material-icons.large,
+    .material-icons.large:hover,
+    .m-custom-tabs__tab a,
+    .card-content .card-title {
         color: var(--text-color-title) !important;
     }
     
@@ -181,10 +190,15 @@ domain("hentai365.ru") {
     .ccs-wrap,
     .ccs-sugges .dropdown-content li,
     .material-icons,
+    .dropdown-button .material-icons:hover,
     .grey-text.text-darken-2,
     .card-content .no-margin-bottom,
     .m-catalog-item__description,
-    .card-content {
+    .card-content,
+    .m-comments.collection p,
+    .m-comment-body,
+    .truncate,
+    .m-animelist-item td a {
         color: var(--text-color-gray) !important;
     }
     
@@ -203,7 +217,9 @@ domain("hentai365.ru") {
     input[type="time"]:focus:not([readonly]) + label:not(.md-input),
     input[type="url"]:focus:not([readonly]) + label:not(.md-input),
     textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input),
-    .m-series-score__title {
+    .m-series-score__title,
+    .m-comment-episode,
+    .m-comment-date {
         color: var(--text-color-minor) !important;
     }
     
@@ -221,11 +237,17 @@ domain("hentai365.ru") {
     .m-catalog-item .line-1 a:hover,
     .m-catalog-item .line-2 a:hover,
     .m-translation-view .line-1 a:hover,
-    .m-translation-view .line-2 a:hover {
+    .m-translation-view .line-2 a:hover,
+    .m-comment-author-name a:hover,
+    .m-comment-date:hover,
+    .truncate:hover,
+    .m-custom-tabs__tab a:hover,
+    .m-animelist-item td a:hover {
         color: var(--text-color-blue) !important;
     }
     
-    a:hover {
+    a:hover,
+    .card-content.clearfix span span {
         color: var(--text-color-red) !important;
     }
     

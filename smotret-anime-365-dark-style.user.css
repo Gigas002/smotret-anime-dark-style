@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.9.1
+@version     1.0.9.2
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -144,12 +144,11 @@ domain("hentai365.ru") {
     .m-translation-view .line-2 a,
     .m-select-sibling-episode .btn,
     .m-comment-author-name a,
-    .material-icons.large,
-    .material-icons.large:hover,
     .m-custom-tabs__tab a,
     .card-content .card-title,
     .switch_label_off.selected,
-    .switch_label_on.selected {
+    .switch_label_on.selected,
+    .tooltipped-native:after {
         color: var(--text-color-title) !important;
     }
     
@@ -225,7 +224,7 @@ domain("hentai365.ru") {
     .m-comment-date,
     .m-new-episode span,
     .switch_label_off,
-    .switch_label_on{
+    .switch_label_on {
         color: var(--text-color-minor) !important;
     }
     
@@ -239,7 +238,6 @@ domain("hentai365.ru") {
     .m-catalog-item_small .line-1 a:hover,
     .m-catalog-item_small .line-2 a:hover,
     .notifications-item__title a:hover,
-    .material-icons:hover,
     .m-catalog-item .line-1 a:hover,
     .m-catalog-item .line-2 a:hover,
     .m-translation-view .line-1 a:hover,
@@ -301,7 +299,8 @@ domain("hentai365.ru") {
     
     nav ul li:hover,
     nav ul a:hover,
-    .ccs-chip-field {
+    .ccs-chip-field,
+    .tooltipped-native:after {
         background-color: var(--hover-08ev);
     }
     

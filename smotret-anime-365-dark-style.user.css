@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.10.2
+@version     1.1.0
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -206,7 +206,10 @@ domain("hentai365.ru") {
     .m-animelist-item td a,
     .orange-text.text-darken-4,
     .green-text.text-darken-4,
-    .vjs-default-skin .vjs-menu-button ul li:hover {
+    .vjs-default-skin .vjs-menu-button ul li:hover,
+    .dropdown-content li > a,
+    .dropdown-content li > span,
+    #nav-mobile li a{
         color: var(--text-color-gray) !important;
     }
     
@@ -230,7 +233,8 @@ domain("hentai365.ru") {
     .m-comment-date,
     .m-new-episode span,
     .switch_label_off,
-    .switch_label_on {
+    .switch_label_on,
+    .caret {
         color: var(--text-color-minor) !important;
     }
     
@@ -305,7 +309,8 @@ domain("hentai365.ru") {
     nav .dropdown-content li > a,
     .ccs-chip.chip,
     .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content,
-    .vjs-default-skin .vjs-big-play-button {
+    .vjs-default-skin .vjs-big-play-button,
+    .side-nav {
         background-color: var(--color-08ev);
     }
     
@@ -324,13 +329,16 @@ domain("hentai365.ru") {
     .dropdown-content li:hover, 
     .dropdown-content li.active,
     .dropdown-content li.selected,
+    .dropdown-content li.active.selected,
     nav ul li:hover,
     nav ul a:hover,
     .ccs-chip-field,
     .tooltipped-native:after,
     .vjs-default-skin .vjs-menu-button ul li:hover,
     .vjs-default-skin:hover .vjs-big-play-button,
-    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message {
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
+    .side-nav a:hover,
+    .side-nav li.active {
         background-color: var(--hover-08ev);
     }
     
@@ -365,6 +373,10 @@ domain("hentai365.ru") {
     
     .m-select-translation-type .btn.active:hover {
         background-color: var(--blue-button-hover) !important;
+    }
+    
+    .divider {
+        background-color: transparent;
     }
 
     .qq-uploader {
@@ -432,25 +444,6 @@ domain("hentai365.ru") {
     [type="checkbox"].filled-in:checked+label::after {
         border: 2px solid rgb(116, 125, 122);
         background-color: rgb(111, 116, 116);
-    }
-
-    nav {
-        background-color: rgba(54, 55, 53, 1.0);
-    }
-
-    nav ul li.active,
-    nav .dropdown-content li.active,
-    nav .dropdown-content li:hover {
-        background-color: rgba(51, 54, 51, 0.5);
-    }
-
-    .side-nav a:hover {
-        background-color: rgba(38, 38, 38, 1);
-    }
-
-    .dropdown-content,
-    .side-nav {
-        background-color: rgb(50, 50, 50);
     }
 
     .m-embed-code textarea {
@@ -586,10 +579,6 @@ domain("hentai365.ru") {
         margin-top: 0;
     }
 
-    .divider {
-        background-color: rgb(65, 65, 65);
-    }
-
     .m-embed-code-link {
         border-bottom: 1px dotted rgb(176, 177, 171);
     }
@@ -671,5 +660,9 @@ domain("hentai365.ru") {
     
     .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
         box-shadow: none;
+    }
+    
+    .ccs-wrap.focused {
+        box-shadow: 0 2px var(--text-color-blue);
     }
 }

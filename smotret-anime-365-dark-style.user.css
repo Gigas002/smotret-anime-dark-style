@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.0.7
+@version     1.1.1
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -343,6 +343,10 @@ domain("hentai365.ru") {
         border-color: var(--color-08ev);
     }
     
+    .m-embed-code-link {
+        border-bottom-color: var(--text-color-blue);
+    }
+    
     md-input-container:not(.md-input-invalid).md-input-focused .md-input {
         border-color: var(--back-color-blue-button);
     }
@@ -491,10 +495,6 @@ domain("hentai365.ru") {
 
     .m-comment.m-comment-new.collection-item.avatar .circle {
         margin-top: 0;
-    }
-
-    .m-embed-code-link {
-        border-bottom: 1px dotted rgb(176, 177, 171);
     }
 
     div.m-comment.m-comment-new.collection-item.avatar {

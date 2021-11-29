@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.0.4
+@version     1.1.0.5
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -209,7 +209,8 @@ domain("hentai365.ru") {
     .vjs-default-skin .vjs-menu-button ul li:hover,
     .dropdown-content li > a,
     .dropdown-content li > span,
-    #nav-mobile li a{
+    #nav-mobile li a,
+    .m-alert-notice {
         color: var(--text-color-gray) !important;
     }
     
@@ -267,7 +268,8 @@ domain("hentai365.ru") {
     .m-comment-date:hover,
     .truncate:hover,
     .m-custom-tabs__tab a:hover,
-    .m-animelist-item td a:hover {
+    .m-animelist-item td a:hover,
+    .m-alert-notice a {
         color: var(--text-color-blue) !important;
     }
     
@@ -315,7 +317,8 @@ domain("hentai365.ru") {
     .vjs-default-skin .vjs-big-play-button,
     .btn-floating,
     .side-nav li.active,
-    .tag {
+    .tag,
+    .m-alert-notice {
         background-color: var(--color-08ev);
     }
     
@@ -350,6 +353,17 @@ domain("hentai365.ru") {
     
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-message::after {
         border-left-color: var(--hover-08ev);
+    }
+    
+    [type="checkbox"].filled-in:not(:checked) + label::after,
+    [type="checkbox"].filled-in.tabbed:not(:checked) + label::after{
+        border-color: var(--text-color-minor);
+    }
+    
+    [type="checkbox"].filled-in:checked + label::after,
+    [type="checkbox"].filled-in.tabbed:checked + label::after {
+        border-color: var(--back-color-blue-button) !important;
+        background-color: var(--back-color-blue-button) !important;
     }
     
     .vjs-default-skin:hover .vjs-big-play-button {
@@ -389,10 +403,6 @@ domain("hentai365.ru") {
 
     .red:hover {
         background-color: var(--text-color-red) !important;
-    }
-
-    [type="checkbox"].filled-in:checked+label::after {
-        border: 2px solid rgb(116, 125, 122);
     }
 
     .m-custom-tabs__tab_active {

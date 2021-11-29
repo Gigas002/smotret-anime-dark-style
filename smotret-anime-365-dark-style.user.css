@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.0.1
+@version     1.1.0.2
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -292,14 +292,13 @@ domain("hentai365.ru") {
     .collection.with-header .m-comment.collection-item.avatar,
     .m-comments.collection.with-header .collection-item,
     .m-comments,
-    .light-blue.darken-4 {
+    .side-nav {
         background-color: var(--color-04ev);
     }
     
     .white,
     #footer,
-    .grey.darken-4,
-    .tag {
+    .grey.darken-4 {
         background-color: var(--color-04ev) !important;
     }
     
@@ -313,8 +312,9 @@ domain("hentai365.ru") {
     .ccs-chip.chip,
     .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content,
     .vjs-default-skin .vjs-big-play-button,
-    .side-nav,
-    .btn-floating {
+    .btn-floating,
+    .side-nav li.active,
+    .tag {
         background-color: var(--color-08ev);
     }
     
@@ -326,7 +326,8 @@ domain("hentai365.ru") {
     .dropdown-content,
     .orange.accent-4,
     .m-block-title a.btn,
-    #login-form>div>div>a {
+    #login-form>div>div>a,
+    .light-blue.darken-4 {
         background-color: var(--color-08ev) !important;
     }
 
@@ -342,7 +343,6 @@ domain("hentai365.ru") {
     .vjs-default-skin:hover .vjs-big-play-button,
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
     .side-nav a:hover,
-    .side-nav li.active,
     .btn-floating:hover {
         background-color: var(--hover-08ev);
     }
@@ -444,11 +444,6 @@ domain("hentai365.ru") {
 */
     [type="checkbox"].filled-in:checked+label::after {
         border: 2px solid rgb(116, 125, 122);
-        background-color: rgb(111, 116, 116);
-    }
-
-    .m-embed-code textarea {
-        background: rgb(45, 45, 47);
     }
 
     .m-custom-tabs__tab_active {
@@ -493,20 +488,11 @@ domain("hentai365.ru") {
     .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {
         color: rgb(93, 91, 93);
     }
-*/
-    .m-group-pop-box,
-    .m-pop-box {
-        background: rgb(74, 74, 74);
-    }
-/*
+    
     .m-moment__play-button.material-icons {
         color: rgb(93, 91, 93);
     }
 */
-    table.highlight>tbody>tr:hover {
-        background-color: rgb(46, 46, 46);
-    }
-
     .input-field input:not([type]):focus:not([readonly]),
     .input-field input[type=text]:focus:not([readonly]),
     .input-field input[type=password]:focus:not([readonly]),
@@ -538,20 +524,6 @@ domain("hentai365.ru") {
         color: rgb(91, 93, 94);
     }
 */
-
-    .ccs-sugg .btn.green,
-    .ccs-sugg .btn.red {
-        background-color: rgb(130, 130, 130) !important;
-    }
-
-    .progress {
-        background-color: rgb(75, 77, 82);
-    }
-
-    .progress .indeterminate {
-        background-color: rgb(123, 126, 135);
-    }
-
     .m-comment.m-comment-new.collection-item.avatar .circle {
         margin-top: 0;
     }
@@ -561,7 +533,6 @@ domain("hentai365.ru") {
     }
 
     div.m-comment.m-comment-new.collection-item.avatar {
-        background-color: rgb(43, 43, 43);
         box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.6);
     }
 
@@ -592,41 +563,12 @@ domain("hentai365.ru") {
         padding-top: 1rem;
         padding-bottom: 0;
     }
-
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.level,
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever {
-        background-color: rgb(89, 87, 92);
-    }
-
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever::after {
-        background-color: rgb(65, 66, 67);
-    }
 /*
     .switch_label_off.selected,
     .switch_label_on.selected {
         color: rgba(235, 235, 235, 0.87);
     }
 */
-    .m-alert-success {
-        border-color: rgb(65, 67, 72);
-    }
-
-    .spinner-blue {
-        border-color: rgb(224, 219, 227);
-    }
-
-    .spinner-red {
-        border-color: rgb(150, 150, 157);
-    }
-
-    .spinner-yellow {
-        border-color: rgb(76, 76, 77);
-    }
-
-    .spinner-green {
-        border-color: rgb(0, 0, 0);
-    }
-
     .tooltipped-native:hover:after {
         margin-bottom: -40px;
     }

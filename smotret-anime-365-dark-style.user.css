@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.0.6
+@version     1.1.0.7
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -210,8 +210,22 @@ domain("hentai365.ru") {
     .dropdown-content li > a,
     .dropdown-content li > span,
     #nav-mobile li a,
-    .m-alert-notice {
+    .m-alert-notice,
+    md-input-container .md-input,
+    .md-autocomplete-suggestions-container.md-default-theme li,
+    .md-autocomplete-suggestions-container li,
+    .qq-upload-list li.qq-upload-success,
+    .qq-upload-list li {
         color: var(--text-color-gray) !important;
+    }
+    
+    .m-series-search-input li {
+        border-bottom-color: transparent;
+    }
+    
+    .qq-upload-list li.qq-upload-success,
+    .qq-uploader {
+        border-color: transparent;
     }
     
     .pagination li a,
@@ -319,7 +333,9 @@ domain("hentai365.ru") {
     .side-nav li.active,
     .tag,
     .m-alert-notice,
-    .materialize-textarea {
+    .materialize-textarea,
+    .md-autocomplete-suggestions-container.md-default-theme,
+    .md-autocomplete-suggestions-container {
         background-color: var(--color-08ev);
     }
     
@@ -327,12 +343,20 @@ domain("hentai365.ru") {
         border-color: var(--color-08ev);
     }
     
+    md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+        border-color: var(--back-color-blue-button);
+    }
+    
     .green.darken-4,
     .dropdown-content,
     .orange.accent-4,
     .m-block-title a.btn,
     #login-form>div>div>a,
-    .light-blue.darken-4 {
+    .light-blue.darken-4,
+    md-progress-linear.md-default-theme ._md-container,
+    md-progress-linear ._md-container,
+    .qq-uploader,
+    .qq-upload{
         background-color: var(--color-08ev) !important;
     }
 
@@ -348,7 +372,13 @@ domain("hentai365.ru") {
     .vjs-default-skin:hover .vjs-big-play-button,
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
     .side-nav a:hover,
-    .btn-floating:hover {
+    .btn-floating:hover,
+    .md-autocomplete-suggestions-container.md-default-theme li:hover,
+    .md-autocomplete-suggestions-container li:hover,
+    .md-autocomplete-suggestions-container.md-default-theme li.selected,
+    .md-autocomplete-suggestions-container li.selected,
+    .qq-upload-list li.qq-upload-success,
+    .qq-upload-list li {
         background-color: var(--hover-08ev);
     }
     
@@ -375,7 +405,8 @@ domain("hentai365.ru") {
     .btn.orange.accent-4:hover,
     .m-block-title a.btn:hover,
     .green.darken-4:hover,
-    #login-form>div>div>a:hover {
+    #login-form>div>div>a:hover,
+    .qq-upload-button.green.darken-4 {
         background-color: var(--hover-08ev) !important;
     }
     
@@ -394,7 +425,9 @@ domain("hentai365.ru") {
     .ccs-sugg .btn.green.checked,
     .m-select-translation-type .btn.active,
     .progress .determinate,
-    .progress .indeterminate {
+    .progress .indeterminate,
+    md-progress-linear.md-default-theme ._md-bar,
+    md-progress-linear ._md-bar {
         background-color: var(--back-color-blue-button) !important;
     }
     

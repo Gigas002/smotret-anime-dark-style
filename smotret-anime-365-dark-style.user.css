@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.0
+@version     1.1.0.1
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -289,14 +289,17 @@ domain("hentai365.ru") {
     .m-new-episodes,
     .collection.with-header .collection-header,
     div.card-panel,
-    .m-comments.collection.with-header .collection-item {
+    .collection.with-header .m-comment.collection-item.avatar,
+    .m-comments.collection.with-header .collection-item,
+    .m-comments,
+    .light-blue.darken-4 {
         background-color: var(--color-04ev);
     }
     
     .white,
     #footer,
-    .collection.with-header .m-comment.collection-item.avatar,
-    .grey.darken-4 {
+    .grey.darken-4,
+    .tag {
         background-color: var(--color-04ev) !important;
     }
     
@@ -310,7 +313,8 @@ domain("hentai365.ru") {
     .ccs-chip.chip,
     .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content,
     .vjs-default-skin .vjs-big-play-button,
-    .side-nav {
+    .side-nav,
+    .btn-floating {
         background-color: var(--color-08ev);
     }
     
@@ -338,7 +342,8 @@ domain("hentai365.ru") {
     .vjs-default-skin:hover .vjs-big-play-button,
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
     .side-nav a:hover,
-    .side-nav li.active {
+    .side-nav li.active,
+    .btn-floating:hover {
         background-color: var(--hover-08ev);
     }
     
@@ -379,12 +384,8 @@ domain("hentai365.ru") {
         background-color: transparent;
     }
 
-    .qq-uploader {
-        background-color: rgb(53, 54, 58) !important;
-    }
-
-    .orange.darken-4 {
-        background-color: rgb(64, 65, 70) !important;
+    .red:hover {
+        background-color: var(--text-color-red) !important;
     }
 /*
     .yellow-text.text-darken-4 {
@@ -464,18 +465,6 @@ domain("hentai365.ru") {
         color: rgb(255, 255, 255);
     }
 */
-    .tag {
-        background-color: rgb(100, 97, 95);
-    }
-
-    .light-blue.darken-4 {
-        background-color: rgba(100, 97, 95, 0) !important;
-    }
-
-    .collection.with-header .m-comment.collection-item.avatar {
-        background-color: rgb(45, 45, 47);
-    }
-
     .collection .collection-item.m-comment {
         border-bottom: 1px solid rgb(62, 63, 67);
     }
@@ -489,10 +478,6 @@ domain("hentai365.ru") {
         padding: 5px 20px;
     }
 
-    .m-comments {
-        background: rgb(32, 33, 35);
-    }
-
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .background {
         fill: var(--hover-08ev);
     }
@@ -503,14 +488,6 @@ domain("hentai365.ru") {
     
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .stroke {
         stroke: none;
-    }
-
-    .btn-floating {
-        background-color: rgb(88, 91, 94);
-    }
-
-    .btn-floating:hover {
-        background-color: rgb(70, 70, 70);
     }
 /*
     .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {

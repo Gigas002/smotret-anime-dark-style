@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.1
+@version     1.1.1.1
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -315,7 +315,8 @@ domain("hentai365.ru") {
     
     .white,
     #footer,
-    .grey.darken-4 {
+    .grey.darken-4,
+    .m-pop-box.m-pop-box-both.z-depth-2.hide-on-med-and-down.m-comments-invite {
         background-color: var(--color-04ev) !important;
     }
     

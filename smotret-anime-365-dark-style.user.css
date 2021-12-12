@@ -1,50 +1,31 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.1.1.4
+@version     1.2.0
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
 @author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
-@advanced dropdown bg-selected "Background image" {
-  cst "Custom" <<<EOT
-  var(--bg-custom, none) EOT;
-  nbg "None" <<<EOT
-  none EOT;
+@preprocessor stylus
+@var select bg-selected "Background image" {
+  "None":"none",
+  "Custom":"custom"
 }
-@advanced text bg-custom "Custom Background; include url()" "url()"
-@advanced dropdown bg-options "Background image type" {
-  Tiled "Tiled" <<<EOT
-  background-repeat: repeat !important;
-  background-size: auto !important;
-  background-position: left top !important; EOT;
-  Fit "Fit Window" <<<EOT
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center top !important; EOT;
+@var text bg-custom "Custom Background; include url()" "url()"
+@var select bg-options "Background image type" {
+  "Tiled": "tiled",
+  "Fit Window":"fit"
 }
-@advanced dropdown bg-attachment "Background image attachment" {
-  Scroll "Scroll" <<<EOT
-  scroll EOT;
-  Fixed "Fixed" <<<EOT
-  fixed EOT;
+@var select bg-attachment "Background image attachment" {
+  "Scroll":"scroll",
+  "Fixed":"fixed"
 }
-@preprocessor uso
 ==/UserStyle== */
 
 @-moz-document domain("smotret-anime.online"),
 domain("anime365.ru"),
 domain("hentai365.ru") {
     :root {
-        --bg-custom:
-            /*[[bg-custom]]*/
-        ;
-        --bg-selected:
-            /*[[bg-selected]]*/
-        ;
-        --bg-attachment:
-            /*[[bg-attachment]]*/
-        ;
         --text-color-gray: rgba(255, 255, 255, 0.69);
         --text-color-title: rgba(255, 255, 255, 0.87);
         --text-color-blue: rgb(170, 182, 254);
@@ -91,11 +72,28 @@ domain("hentai365.ru") {
     /* Background */
     .full-background {
         background-color: var(--color-00ev) !important;
-        background-image: var(--bg-selected) !important;
         background-clip: border-box !important;
         background-origin: padding-box !important;
-        background-attachment: var(--bg-attachment) !important;
-        /*[[bg-options]]*/
+        if bg-selected == "none" {
+            background-image: none !important; 
+        }
+    
+        if bg-selected == "custom" {
+            background-image: bg-custom !important;
+            background-attachment: bg-attachment !important;
+        }
+        
+        if bg-options == "tiled" {
+            background-repeat: repeat !important;
+            background-size: auto !important;
+            background-position: left top !important
+        }
+        
+        if bg-options == "fit" {
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center top !important;
+        }
     }
 
     /* Logo */

@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name        smotret-anime-365-dark-style
+@name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.12
-@homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
-@supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
+@version     1.3.13
+@homepageURL https://github.com/Gigas002/smotret-anime-dark-style
+@supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
-@author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
+@author      Gigas002 (2018-atm), Selpats (2020-atm), h1royuki (2016-2018), Wayd (2019)
 @preprocessor stylus
 @var checkbox romaji-only "Display only romaji titles" 1
 @var select bg-selected "Background image" {
@@ -134,7 +134,7 @@
     /* Logo */
     .brand-logo {
         /* Placed the logo in repo/Image/Logo.png */
-        background: url(https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/Images/Logo.png) center 6px no-repeat;
+        background: url(https://raw.githubusercontent.com/Gigas002/smotret-anime-dark-style/master/Images/Logo.png) center 6px no-repeat;
         background-size: 88%;
     }
 

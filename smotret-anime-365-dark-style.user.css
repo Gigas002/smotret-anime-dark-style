@@ -1,262 +1,522 @@
 /* ==UserStyle==
 @name        smotret-anime-365-dark-style
 @namespace   Gigas002
-@version     1.0.5
+@version     1.3.12
 @homepageURL https://github.com/Gigas002/smotret-anime-365-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-365-dark-style/issues
-@updateURL   https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/smotret-anime-365-dark-style.user.css
 @license     WTFPL (http://www.wtfpl.net/)
 @author      Gigas002 (2018-atm), h1royuki (2016-2018), Wayd (2019)
-@advanced dropdown bg-selected "Background image" {
-  cst "Custom" <<<EOT
-  var(--bg-custom, none) EOT;
-  nbg "None" <<<EOT
-  none EOT;
+@preprocessor stylus
+@var checkbox romaji-only "Display only romaji titles" 1
+@var select bg-selected "Background image" {
+  "None":"none",
+  "Custom":"custom"
 }
-@advanced text bg-custom "Custom Background; include url()" "url()"
-@advanced dropdown bg-options "Background image type" {
-  Tiled "Tiled" <<<EOT
-  background-repeat: repeat !important;
-  background-size: auto !important;
-  background-position: left top !important; EOT;
-  Fit "Fit Window" <<<EOT
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center top !important; EOT;
+@var text bg-custom "Custom Background; include url()" "url()"
+@var select bg-options "Background image type" {
+  "Tiled": "tiled",
+  "Fit Window":"fit"
 }
-@advanced dropdown bg-attachment "Background image attachment" {
-  Scroll "Scroll" <<<EOT
-  scroll EOT;
-  Fixed "Fixed" <<<EOT
-  fixed EOT;
+@var select bg-attachment "Background image attachment" {
+  "Scroll":"scroll",
+  "Fixed":"fixed"
 }
-@preprocessor uso
 ==/UserStyle== */
 
-@-moz-document domain("smotret-anime.online"),
-domain("hentai365.ru") {
+@-moz-document domain("smotret-anime.online"), domain("anime365.ru"), domain("hentai365.ru") {
     :root {
-        --bg-custom:
-            /*[[bg-custom]]*/
-        ;
-        --bg-selected:
-            /*[[bg-selected]]*/
-        ;
-        --bg-attachment:
-            /*[[bg-attachment]]*/
-        ;
+        --text-color-gray: rgba(255, 255, 255, 0.69);
+        --text-color-title: rgba(255, 255, 255, 0.87);
+        --text-color-blue: rgb(170, 182, 254);
+        --text-color-minor: rgba(255, 255, 255, 0.38);
+        --text-color-blue-hover: rgb(199, 207, 254);
+        --text-color-red: #ff5857;
+        --text-color-green: #56d469;
+        --back-color-deep: #121212;
+        --back-color-blue-button: #534bae;
+        --blue-button-hover: #49599a;
+        --border-color: #343536;
+        --border-color-dim: #252526;
+        --color-hover-blue: #82b1ff;
+        --color-yellow: #ffea60;
+        --back-green: rgba(63, 227, 118, .08);
+        --back-red: rgba(255, 73, 95, .08);
+
+        --color-00ev: #121212;
+        --color-01ev: #1e1e1e;
+        --color-02ev: #232323;
+        --color-03ev: #252525;
+        --color-04ev: #272727;
+        --color-06ev: #2c2c2c;
+        --color-08ev: #2f2f2f;
+        --color-12ev: #333333;
+        --color-16ev: #353535;
+        --color-24ev: #383838;
+
+        --hover-00ev: #1b1b1b;
+        --hover-01ev: #272727;
+        --hover-02ev: #2c2c2c;
+        --hover-03ev: #2e2e2e;
+        --hover-04ev: #2f2f2f;
+        --hover-06ev: #343434;
+        --hover-08ev: #373737;
+        --hover-12ev: #3b3b3b;
+        --hover-16ev: #3d3d3d;
+        --hover-24ev: #404040;
+
+        color-scheme: dark;
+    }
+    
+    if romaji-only {
+        .m-new-episode [class|="line"],
+        .m-catalog-view [class|="line"],
+        .m-translation-view [class|="line"],
+        .m-catalog-item_small .line-1,
+        .m-catalog-item .line-1 {
+            display: none;
+        }
+        
+        .m-catalog-item .line-2 {
+            font-size: 28px;
+        }
+        
+        .m-new-episode [class|="line"]:nth-last-child(2) {
+            display: inherit;
+            font-size: 18px;
+        }
+        
+        .m-catalog-item_small .line-2 {
+            font-size: 18px;
+        }
+        
+        .m-catalog-view [class|="line"]:last-of-type,
+        .m-translation-view [class|="line"]:last-of-type {
+            display: inherit;
+            font-size: 32px;
+        }
+        
+        .m-translation-view .line-2 {
+            font-size: 32px;
+        }
+    }
+    
+    body {
+        background-color: var(--color-00ev) !important;
     }
 
     /* Background */
     .full-background {
-        background-color: rgb(22, 21, 26) !important;
-        background-image: var(--bg-selected) !important;
+        background-color: var(--color-00ev) !important;
         background-clip: border-box !important;
         background-origin: padding-box !important;
-        background-attachment: var(--bg-attachment) !important;
-        /*[[bg-options]]*/
+        if bg-selected == "none" {
+            background-image: none !important; 
+        }
+    
+        if bg-selected == "custom" {
+            background-image: bg-custom !important;
+            background-attachment: bg-attachment !important;
+        }
+        
+        if bg-options == "tiled" {
+            background-repeat: repeat !important;
+            background-size: auto !important;
+            background-position: left top !important
+        }
+        
+        if bg-options == "fit" {
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center top !important;
+        }
     }
 
     /* Logo */
     .brand-logo {
         /* Placed the logo in repo/Image/Logo.png */
-        background: url(https://bit.ly/2Zbn81G) center 6px no-repeat;
+        background: url(https://raw.githubusercontent.com/Gigas002/smotret-anime-365-dark-style/master/Images/Logo.png) center 6px no-repeat;
         background-size: 88%;
     }
 
     /* todo logo for hentai365.ru */
 
-    /* Ads */
-    .m-news-box-fix,
-    div.m-news-box-fix-1-inner,
-    div.card-content.hide-on-small-and-down.m-news-box-fix,
-    div.card-content.m-news-box-fix.m-news-box-fix-1,
-    div.card-content.m-new-episodes__description,
-    div.card-content.m-news-box-fix.m-news-box-fix-right-column.ad-placement,
-    .m-comments.collection .collection-item.avatar p,
-    .m-comments.collection p,
-    div.card-content.m-left-vk-group {
-        display: none;
-    }
-
-    /* Notifications */
-    div.onesignal-bell-launcher-button {
-        display: none;
-    }
-
     /* Main body part */
+    
+    h2,
+    h4,
+    .m-catalog-search,
+    .collection.with-header .collection-header,
+    .m-new-episode .line-1 a,
+    .m-new-episode .line-2 a,
+    .pagination li.active a,
+    .no-margin-top,
+    .m-block-title a.btn,
+    .green.darken-4,
+    .card .card-content h1,
+    .card .card-content .h2,
+    .orange-text.text-lighten-3,
+    .white-text,
+    .m-moment__title a,
+    .m-moment-author-name a,
+    .m-moments-list-card.slick-slider .slick-dots li button::before,
+    .btn-floating,
+    .btn-floating i,
+    .m-catalog-item_small .line-1 a,
+    .m-catalog-item_small .line-2 a,
+    .m-small-title,
+    .notifications-item__title a,
+    .m-select-view__label,
+    .m-catalog-item .line-1 a,
+    .m-catalog-item .line-2 a,
+    .m-series-score__value.purple-text.text-darken-4,
+    .m-series-score__value.yellow-text.text-darken-4,
+    .m-catalog-view .line-1,
+    .m-catalog-view .line-2,
+    .m-series-score__value.green-text,
+    .card-content h3,
+    .m-translation-view .line-1 a,
+    .m-translation-view .line-2 a,
+    .m-select-sibling-episode .btn,
+    .m-comment-author-name a,
+    .m-custom-tabs__tab a,
+    .card-content .card-title,
+    .switch_label_off.selected,
+    .switch_label_on.selected,
+    .tooltipped-native:after,
+    #login-form>div>div>a,
+    .vjs-default-skin,
+    .vjs-default-skin .vjs-big-play-button::before,
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
+    .m-pop-box h3,
+    .m-comment-author-name {
+        color: var(--text-color-title) !important;
+    }
+    
+    .card .m-new-episodes__description,
+    .input-field input:not([type]):focus:not([readonly]),
+    .input-field input[type="text"]:focus:not([readonly]),
+    .input-field input[type="password"]:focus:not([readonly]),
+    .input-field input[type="email"]:focus:not([readonly]),
+    .input-field input[type="url"]:focus:not([readonly]),
+    .input-field input[type="time"]:focus:not([readonly]),
+    .input-field input[type="date"]:focus:not([readonly]),
+    .input-field input[type="datetime"]:focus:not([readonly]),
+    .input-field input[type="datetime-local"]:focus:not([readonly]),
+    .input-field input[type="tel"]:focus:not([readonly]),
+    .input-field input[type="number"]:focus:not([readonly]),
+    .input-field input[type="search"]:focus:not([readonly]),
+    .input-field textarea.materialize-textarea:focus:not([readonly]),
+    .button-collapse, nav ul.right a,
+    .card .card-content p,
+    .m-footer-genres a,
+    .m-moment__episode,
+    .m-genres-icons .icon,
+    .m-series-score__value,
+    .purple-text.text-darken-4,
+    .input-field input:not([type]),
+    .input-field input[type="date"],
+    .input-field input[type="datetime-local"],
+    .input-field input[type="datetime"],
+    .input-field input[type="email"],
+    .input-field input[type="number"],
+    .input-field input[type="password"],
+    .input-field input[type="search"],
+    .input-field input[type="tel"],
+    .input-field input[type="text"],
+    .input-field input[type="time"],
+    .input-field input[type="url"],
+    label,
+    .card-panel,
+    .notifications-item__message,
+    .ccs-wrap,
+    .ccs-sugges .dropdown-content li,
+    .material-icons,
+    .dropdown-button .material-icons:hover,
+    .grey-text.text-darken-2,
+    .card-content .no-margin-bottom,
+    .m-catalog-item__description,
+    .card-content,
+    .m-comments.collection p,
+    .m-comment-body,
+    .truncate,
+    .m-animelist-item td a,
+    .orange-text.text-darken-4,
+    .green-text.text-darken-4,
+    .vjs-default-skin .vjs-menu-button ul li:hover,
+    .dropdown-content li > a,
+    .dropdown-content li > span,
+    #nav-mobile li a,
+    .m-alert-notice,
+    md-input-container .md-input,
+    .md-autocomplete-suggestions-container.md-default-theme li,
+    .md-autocomplete-suggestions-container li,
+    .qq-upload-list li.qq-upload-success,
+    .qq-upload-list li {
+        color: var(--text-color-gray) !important;
+    }
+    
+    .input-field input[type="text"]:-webkit-autofill,
+    .input-field input[type="password"]:-webkit-autofill {
+        background-image: none;
+    }
+    
+    .m-series-search-input li {
+        border-bottom-color: transparent;
+    }
+    
+    .qq-upload-list li.qq-upload-success,
+    .qq-uploader {
+        border-color: transparent;
+    }
+    
+    .pagination li a,
+    input[type="text"].m-big-search-input::placeholder,
+    .m-moment__meta,
+    .input-field textarea.materialize-textarea,
+    input[type="date"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="datetime-local"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="email"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="number"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="password"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="search"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="tel"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="text"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="time"]:focus:not([readonly]) + label:not(.md-input),
+    input[type="url"]:focus:not([readonly]) + label:not(.md-input),
+    textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input),
+    .m-series-score__title,
+    .m-comment-episode,
+    .m-comment-date,
+    .m-new-episode span,
+    .switch_label_off,
+    .switch_label_on,
+    .caret,
+    .empty {
+        color: var(--text-color-minor) !important;
+    }
+    
+    .vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+        color: #000 !important;
+    }
+    
+    .vjs-default-skin .vjs-play-progress,
+    .vjs-default-skin .vjs-volume-level,
+    .vjs-default-skin .vjs-menu-button ul li.vjs-selected,
+    .vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {
+        background-color: var(--text-color-title);
+    }
+    
+    a,
+    .m-new-episode .line-1 a:hover,
+    .m-new-episode .line-2 a:hover,
+    .pagination li a:hover,
+    .m-footer-genres a:hover,
+    .m-moment__title a:hover,
+    .m-moment-author-name a:hover,
+    .m-catalog-item_small .line-1 a:hover,
+    .m-catalog-item_small .line-2 a:hover,
+    .notifications-item__title a:hover,
+    .m-catalog-item .line-1 a:hover,
+    .m-catalog-item .line-2 a:hover,
+    .m-translation-view .line-1 a:hover,
+    .m-translation-view .line-2 a:hover,
+    .m-comment-author-name a:hover,
+    .m-comment-date:hover,
+    .truncate:hover,
+    .m-custom-tabs__tab a:hover,
+    .m-animelist-item td a:hover,
+    .m-alert-notice a,
+    .m-alert-success a {
+        color: var(--text-color-blue) !important;
+    }
+    
+    a:hover {
+        color: var(--text-color-blue-hover) !important;
+    }
+    
+    .card-content.clearfix span span {
+        color: var(--text-color-red) !important;
+    }
+    
+    .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {
+        color: var(--back-color-blue-button) !important;
+    }
+    
+    .m-alert-success a.btn {
+        color: #fff !important;
+    }
+
     .card,
     .card-content,
     .m-custom-tabs,
     input.ccs-input,
-    .vjs-default-skin .vjs-control-bar {
-        background-color: rgb(53, 54, 58);
-        color: rgb(255, 255, 255);
-    }
-
-    div.m-new-episode.collection-item.avatar {
-        background-color: rgb(45, 45, 47);
-    }
-
-    .white,
-    div.card-panel,
-    .orange,
-    .qq-uploader {
-        background-color: rgb(53, 54, 58) !important;
-    }
-
-    .grey.darken-4 {
-        background-color: rgb(53, 54, 58) !important;
-        border-bottom: 1px solid rgb(53, 54, 58);
-    }
-
-    .green.darken-4,
-    .orange.accent-4,
-    .orange.darken-4,
-    .m-block-title a.btn,
-    .vjs-default-skin .vjs-slider {
-        background-color: rgb(64, 65, 70) !important;
-    }
-
-    .btn.green.darken-4:hover {
-        background-color: rgb(43, 43, 46) !important;
-    }
-
-    .yellow-text.text-darken-4 {
-        color: rgb(239, 245, 237) !important;
-    }
-
-    div.m-series-score__title {
-        color: rgb(178, 178, 178);
-    }
-
-    .grey-text.text-darken-2 {
-        color: rgb(255, 255, 255) !important;
-    }
-
-    nav ul.right a,
-    .button-collapse {
-        color: rgba(255, 255, 255, 1.0) !important;
-    }
-
-    a,
-    h1,
-    h2,
-    h3,
-    div.m-translation-view__date-added,
-    div.m-translation-view__count-views,
-    div.m-translation-view-small-series-link,
-    input,
-    span.title,
-    .m-custom-tabs__tab a,
-    .green-text,
-    .m-comment-author-name,
-    .orange-text.text-lighten-3,
-    .collection.with-header .m-comment.collection-item.avatar,
-    .dropdown-content li>a,
-    .dropdown-content li>span,
-    .select-wrapper span.caret {
-        color: rgb(255, 255, 255) !important;
-    }
-
-    p {
-        color: rgb(255, 255, 255);
-    }
-
-    div.m-small-title {
-        color: rgb(178, 178, 178)
-    }
-
-    .m-select-translation-type .btn.active,
-    .btn.orange.accent-4:hover {
-        background-color: rgb(43, 43, 46) !important;
-    }
-
-    .vjs-default-skin .vjs-volume-level {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .m-select-view a.active,
-    .m-select-translation-variant .current {
-        color: rgb(255, 255, 255) !important;
-    }
-
-    .m-select-translation-variant a {
-        color: rgb(101, 100, 98) !important;
-    }
-
-    [type="checkbox"].filled-in:checked+label::after {
-        border: 2px solid rgb(116, 125, 122);
-        background-color: rgb(111, 116, 116);
-    }
-
-    .vjs-default-skin .vjs-play-progress {
-        background-color: rgb(212, 212, 212);
-    }
-
-    nav ul li:hover,
-    nav ul li.active,
-    nav {
-        background-color: rgba(54, 55, 53, 1.0);
-    }
-
-    .dropdown-content li:hover,
-    .dropdown-content li.active,
-    .dropdown-content li.selected {
-        background-color: rgba(38, 40, 38, 0.5);
-    }
-
-    nav ul li.active,
-    nav .dropdown-content li.active,
-    nav .dropdown-content li:hover {
-        background-color: rgba(51, 54, 51, 0.5);
-    }
-
-    .side-nav a:hover {
-        background-color: rgba(38, 38, 38, 1);
-    }
-
-    .dropdown-content,
-    .side-nav {
-        background-color: rgb(50, 50, 50);
-    }
-
+    .vjs-default-skin .vjs-control-bar,
+    div.m-new-episode.collection-item.avatar,
     .m-new-episodes,
-    .m-embed-code textarea {
-        background: rgb(45, 45, 47);
+    .collection.with-header .collection-header,
+    div.card-panel,
+    .collection.with-header .m-comment.collection-item.avatar,
+    .m-comments.collection.with-header .collection-item,
+    .m-comments,
+    .side-nav,
+    .progress,
+    .m-group-pop-box,
+    .m-pop-box,
+    .m-alert-success {
+        background-color: var(--color-04ev);
+    }
+    
+    .white,
+    #footer,
+    .grey.darken-4 {
+        background-color: var(--color-04ev) !important;
+    }
+
+    thead,
+    table.striped > tbody > tr:nth-child(2n+1) {
+        background-color: var(--hover-04ev)
+    }
+    
+    .m-show-comments:hover,
+    .vjs-default-skin .vjs-slider {
+        background-color: var(--hover-04ev) !important; 
+    }
+    
+    nav ul li.active,
+    nav .dropdown-content li > a,
+    .ccs-chip.chip,
+    .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content,
+    .vjs-default-skin .vjs-big-play-button,
+    .vjs-default-skin .vjs-big-play-button:focus,
+    .btn-floating,
+    .side-nav li.active,
+    .tag,
+    .m-alert-notice,
+    .materialize-textarea,
+    .md-autocomplete-suggestions-container.md-default-theme,
+    .md-autocomplete-suggestions-container {
+        background-color: var(--color-08ev);
+    }
+    
+    .vjs-default-skin .vjs-big-play-button,
+    .vjs-default-skin .vjs-big-play-button:focus {
+        border-color: var(--color-08ev);
+    }
+    
+    .m-embed-code-link {
+        border-bottom-color: var(--text-color-blue);
+    }
+    
+    md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+        border-color: var(--back-color-blue-button);
+    }
+    
+    .green.darken-4,
+    .dropdown-content,
+    .orange.accent-4,
+    .m-block-title a.btn,
+    #login-form>div>div>a,
+    .light-blue.darken-4,
+    md-progress-linear.md-default-theme ._md-container,
+    md-progress-linear ._md-container,
+    .qq-uploader,
+    .qq-upload{
+        background-color: var(--color-08ev) !important;
+    }
+
+    .dropdown-content li:hover, 
+    .dropdown-content li.active,
+    .dropdown-content li.selected,
+    .dropdown-content li.active.selected,
+    nav ul li:hover,
+    nav ul a:hover,
+    .ccs-chip-field,
+    .tooltipped-native:after,
+    .vjs-default-skin .vjs-menu-button ul li:hover,
+    .vjs-default-skin:hover .vjs-big-play-button,
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
+    .side-nav a:hover,
+    .btn-floating:hover,
+    .md-autocomplete-suggestions-container.md-default-theme li:hover,
+    .md-autocomplete-suggestions-container li:hover,
+    .md-autocomplete-suggestions-container.md-default-theme li.selected,
+    .md-autocomplete-suggestions-container li.selected,
+    .qq-upload-list li.qq-upload-success,
+    .qq-upload-list li {
+        background-color: var(--hover-08ev);
+    }
+    
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-bottom-right .onesignal-bell-launcher-message::after {
+        border-left-color: var(--hover-08ev);
+    }
+    
+    [type="checkbox"].filled-in:not(:checked) + label::after,
+    [type="checkbox"].filled-in.tabbed:not(:checked) + label::after{
+        border-color: var(--text-color-minor);
+    }
+    
+    [type="checkbox"].filled-in:checked + label::after,
+    [type="checkbox"].filled-in.tabbed:checked + label::after {
+        border-color: var(--back-color-blue-button) !important;
+        background-color: var(--back-color-blue-button) !important;
+    }
+    
+    .vjs-default-skin:hover .vjs-big-play-button {
+        border-color: var(--hover-08ev);
+    }
+
+    .btn.green.darken-4:hover,
+    .btn.orange.accent-4:hover,
+    .m-block-title a.btn:hover,
+    .green.darken-4:hover,
+    #login-form>div>div>a:hover,
+    .qq-upload-button.green.darken-4 {
+        background-color: var(--hover-08ev) !important;
+    }
+    
+    .vjs-default-skin .vjs-menu {
+        border-top-color: var(--hover-08ev);
+    }
+
+    .materialize-textarea {
+        border: 1px solid var(--border-color-dim);
+    }
+    
+    thead {
+        border-color: var(--border-color);
+    }
+        
+    .faq-question {
+        border-color: var(--text-color-blue);
+    }
+    
+    .ccs-chip.selected .ccs-chip-field {
+        background-color: var(--back-color-blue-button);
+    }
+    
+    .ccs-sugg .btn.green.checked,
+    .m-select-translation-type .btn.active,
+    .progress .determinate,
+    .progress .indeterminate,
+    md-progress-linear.md-default-theme ._md-bar,
+    md-progress-linear ._md-bar {
+        background-color: var(--back-color-blue-button) !important;
+    }
+    
+    .m-select-translation-type .btn.active:hover {
+        background-color: var(--blue-button-hover) !important;
+    }
+    
+    .divider {
+        background-color: transparent;
+    }
+
+    .red:hover {
+        background-color: var(--text-color-red) !important;
     }
 
     .m-custom-tabs__tab_active {
         border-bottom: 2px solid rgb(255, 255, 255);
-    }
-
-    .orange-text.text-darken-4,
-    .purple-text.text-darken-4 {
-        color: rgb(219, 223, 230) !important;
-    }
-
-    .ccs-sugges .dropdown-content li,
-    .m-comment-new .input-field {
-        color: rgb(255, 255, 255);
-    }
-
-    .tag {
-        background-color: rgb(100, 97, 95);
-    }
-
-    .light-blue.darken-4 {
-        background-color: rgba(100, 97, 95, 0) !important;
-    }
-
-    .vjs-default-skin:hover .vjs-big-play-button,
-    .vjs-default-skin .vjs-big-play-button:focus,
-    .vjs-default-skin .vjs-big-play-button {
-        background: rgb(81, 82, 85);
-        border-color: rgb(81, 82, 85);
-    }
-
-    .collection.with-header .m-comment.collection-item.avatar {
-        background-color: rgb(45, 45, 47);
     }
 
     .collection .collection-item.m-comment {
@@ -264,51 +524,24 @@ domain("hentai365.ru") {
     }
 
     .m-comments.collection.with-header .collection-item {
-        border-bottom: 1px solid rgb(32, 33, 35);
-    }
-
-    .m-comments.collection.with-header .collection-item {
-        background-color: rgb(53, 54, 58);
+        border-bottom: 1px solid transparent;
     }
 
     .collection.with-header .collection-header {
-        background-color: rgb(53, 54, 58);
-        border-bottom: 1px solid rgb(53, 54, 58);
-        box-shadow: 0 1px 6px -2px rgba(0, 0, 0, 0.6);
+        border-bottom-color: transparent;
         padding: 5px 20px;
     }
 
-    .m-comments {
-        background: rgb(32, 33, 35);
-    }
-
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .background {
-        fill: rgb(66, 67, 70);
+        fill: var(--hover-08ev);
     }
-
-    .btn-floating {
-        background-color: rgb(88, 91, 94);
+    
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .foreground {
+        fill: var(--text-color-gray);
     }
-
-    .btn-floating:hover {
-        background-color: rgb(70, 70, 70);
-    }
-
-    .m-moments-list-card.slick-slider .slick-dots li.slick-active button::before {
-        color: rgb(93, 91, 93);
-    }
-
-    .m-group-pop-box,
-    .m-pop-box {
-        background: rgb(74, 74, 74);
-    }
-
-    .m-moment__play-button.material-icons {
-        color: rgb(93, 91, 93);
-    }
-
-    table.highlight>tbody>tr:hover {
-        background-color: rgb(46, 46, 46);
+    
+    #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher.onesignal-bell-launcher-theme-default .onesignal-bell-launcher-button svg .stroke {
+        stroke: none;
     }
 
     .input-field input:not([type]):focus:not([readonly]),
@@ -328,60 +561,11 @@ domain("hentai365.ru") {
         box-shadow: 0 1px 0 0 rgb(91, 91, 94);
     }
 
-    input[type=text]:focus:not([readonly])+label:not(.md-input),
-    input[type=password]:focus:not([readonly])+label:not(.md-input),
-    input[type=email]:focus:not([readonly])+label:not(.md-input),
-    input[type=url]:focus:not([readonly])+label:not(.md-input),
-    input[type=time]:focus:not([readonly])+label:not(.md-input),
-    input[type=date]:focus:not([readonly])+label:not(.md-input),
-    input[type=datetime-local]:focus:not([readonly])+label:not(.md-input),
-    input[type=tel]:focus:not([readonly])+label:not(.md-input),
-    input[type=number]:focus:not([readonly])+label:not(.md-input),
-    input[type=search]:focus:not([readonly])+label:not(.md-input),
-    textarea.materialize-textarea:focus:not([readonly])+label:not(.md-input) {
-        color: rgb(91, 93, 94);
-    }
-
-    .ccs-chip.chip {
-        background-color: rgb(123, 123, 123);
-    }
-
-    .ccs-chip-field {
-        background-color: rgb(86, 86, 86);
-    }
-
-    .ccs-sugg .btn.green,
-    .ccs-sugg .btn.red {
-        background-color: rgb(130, 130, 130) !important;
-    }
-
-    .ccs-sugg .btn.green.checked,
-    .ccs-sugg .btn.red.checked {
-        background-color: rgb(74, 74, 74) !important;
-    }
-
-    .progress {
-        background-color: rgb(75, 77, 82);
-    }
-
-    .progress .indeterminate {
-        background-color: rgb(123, 126, 135);
-    }
-
     .m-comment.m-comment-new.collection-item.avatar .circle {
         margin-top: 0;
     }
 
-    .divider {
-        background-color: rgb(65, 65, 65);
-    }
-
-    .m-embed-code-link {
-        border-bottom: 1px dotted rgb(176, 177, 171);
-    }
-
     div.m-comment.m-comment-new.collection-item.avatar {
-        background-color: rgb(43, 43, 43);
         box-shadow: inset 0 0 6px 0 rgba(0, 0, 0, 0.6);
     }
 
@@ -413,37 +597,31 @@ domain("hentai365.ru") {
         padding-bottom: 0;
     }
 
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.level,
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever {
-        background-color: rgb(89, 87, 92);
+    .tooltipped-native:hover:after {
+        margin-bottom: -40px;
     }
-
-    .ccs-genre-op .switch label input[type=checkbox]:checked+.lever::after {
-        background-color: rgb(65, 66, 67);
+    
+    .vjs-default-skin .vjs-volume-level {
+        height: inherit;    
     }
-
-    .switch_label_off.selected,
-    .switch_label_on.selected {
-        color: rgba(235, 235, 235, 0.87);
+    
+    .vjs-default-skin .vjs-menu-button .vjs-menu .vjs-menu-content {
+        box-shadow: none;
     }
-
-    .m-alert-success {
-        border-color: rgb(65, 67, 72);
+    
+    .ccs-wrap.focused {
+        box-shadow: 0 2px var(--text-color-blue);
     }
-
-    .spinner-blue {
-        border-color: rgb(224, 219, 227);
+    
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+        font-weight: 400;
     }
-
-    .spinner-red {
-        border-color: rgb(150, 150, 157);
+    
+    .card .m-new-episodes__description {
+        padding-top: 0px;
     }
-
-    .spinner-yellow {
-        border-color: rgb(76, 76, 77);
-    }
-
-    .spinner-green {
-        border-color: rgb(0, 0, 0);
+    
+    .collection .collection-item.avatar .title {
+        font-size: 14px;
     }
 }

@@ -1,6 +1,6 @@
 # SMOTRET-ANIME DARK STYLE
 
-Dark theme for [smotret-anime.online](https://smotret-anime.online) (also known as `smotret-anime-365.ru`, `smotretanime.ru`, `smotret-anime.ru` and `anime365.ru`) and [hentai365.ru](https://hentai365.ru/).
+Dark theme for [smotret-anime.com](https://smotret-anime.com) (also known as `smotret-anime.online`, `smotret-anime-365.ru`, `smotretanime.ru`, `smotret-anime.ru` and `anime365.ru`) and [hentai365.ru](https://hentai365.ru/).
 
 Starting from **1.0.0 release** added option to choose your own background image (and some minor features for it). To do so, select **Custom** background image option, and then put `url()` to your image to the next field (e.g. `url(https://bakamonster95.files.wordpress.com/2018/01/56380564_p0.jpg)`).
 

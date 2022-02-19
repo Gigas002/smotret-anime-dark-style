@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.13
+@version     1.3.14
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -23,7 +23,7 @@
 }
 ==/UserStyle== */
 
-@-moz-document domain("smotret-anime.online"), domain("anime365.ru"), domain("hentai365.ru") {
+@-moz-document domain("smotret-anime.com"), domain("anime365.ru"), domain("hentai365.ru") {
     :root {
         --text-color-gray: rgba(255, 255, 255, 0.69);
         --text-color-title: rgba(255, 255, 255, 0.87);

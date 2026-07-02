@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.22
+@version     1.3.23
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -175,7 +175,8 @@
     .vjs-default-skin .vjs-big-play-button::before,
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
     .m-pop-box h3,
-    .m-comment-author-name {
+    .m-comment-author-name,
+    .m-sync-row-title {
         color: var(--text-color-title) !important;
     }
     
@@ -238,7 +239,8 @@
     .md-autocomplete-suggestions-container.md-default-theme li,
     .md-autocomplete-suggestions-container li,
     .qq-upload-list li.qq-upload-success,
-    .qq-upload-list li {
+    .qq-upload-list li,
+    .m-sync-row-status {
         color: var(--text-color-gray) !important;
     }
     
@@ -260,17 +262,6 @@
     input[type="text"].m-big-search-input::placeholder,
     .m-moment__meta,
     .input-field textarea.materialize-textarea,
-    input[type="date"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="datetime-local"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="email"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="number"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="password"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="search"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="tel"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="text"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="time"]:focus:not([readonly]) + label:not(.md-input),
-    input[type="url"]:focus:not([readonly]) + label:not(.md-input),
-    textarea.materialize-textarea:focus:not([readonly]) + label:not(.md-input),
     .m-series-score__title,
     .m-comment-episode,
     .m-comment-date,
@@ -280,6 +271,62 @@
     .caret,
     .empty {
         color: var(--text-color-minor) !important;
+    }
+    
+    .input-field input:not([type]),
+    .input-field input[type=date],
+    .input-field input[type=datetime-local],
+    .input-field input[type=datetime],
+    .input-field input[type=email],
+    .input-field input[type=number],
+    .input-field input[type=password],
+    .input-field input[type=search],
+    .input-field input[type=tel],
+    .input-field input[type=text],
+    .input-field input[type=time],
+    .input-field input[type=url],
+    .input-field textarea.materialize-textarea {
+        border-bottom: 1px solid var(--text-color-gray);
+    }
+    
+    .input-field input:not([type]):focus:not([readonly]),
+    .input-field input[type=text]:focus:not([readonly]),
+    .input-field input[type=password]:focus:not([readonly]),
+    .input-field input[type=email]:focus:not([readonly]),
+    .input-field input[type=url]:focus:not([readonly]),
+    .input-field input[type=time]:focus:not([readonly]),
+    .input-field input[type=date]:focus:not([readonly]),
+    .input-field input[type=datetime]:focus:not([readonly]),
+    .input-field input[type=datetime-local]:focus:not([readonly]),
+    .input-field input[type=tel]:focus:not([readonly]),
+    .input-field input[type=number]:focus:not([readonly]),
+    .input-field input[type=search]:focus:not([readonly]),
+    .input-field textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid var(--text-color-title) !important;
+        box-shadow: 0 1px 0 0 var(--text-color-title) !important;
+    }
+    
+    input[type=date]:focus:not([readonly])+label:not(.md-input),
+    input[type=datetime-local]:focus:not([readonly])+label:not(.md-input),
+    input[type=email]:focus:not([readonly])+label:not(.md-input),
+    input[type=number]:focus:not([readonly])+label:not(.md-input),
+    input[type=password]:focus:not([readonly])+label:not(.md-input),
+    input[type=search]:focus:not([readonly])+label:not(.md-input),
+    input[type=tel]:focus:not([readonly])+label:not(.md-input),
+    input[type=text]:focus:not([readonly])+label:not(.md-input),
+    input[type=time]:focus:not([readonly])+label:not(.md-input),
+    input[type=url]:focus:not([readonly])+label:not(.md-input),
+    textarea.materialize-textarea:focus:not([readonly])+label:not(.md-input) {
+        color: var(--text-color-title) !important;
+    }
+           
+        
+    .m-sync-row {
+        border-top: 1px solid var(--text-color-gray);
+    }
+        
+    .m-sync-row-title {
+        font-weight: 500;
     }
     
     .vjs-default-skin .vjs-menu-button ul li.vjs-selected:hover {

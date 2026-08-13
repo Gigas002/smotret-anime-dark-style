@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.23
+@version     1.3.24
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -176,7 +176,8 @@
     #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher .onesignal-bell-launcher-message,
     .m-pop-box h3,
     .m-comment-author-name,
-    .m-sync-row-title {
+    .m-sync-row-title
+    .m-new-episodes__empty {
         color: var(--text-color-title) !important;
     }
     

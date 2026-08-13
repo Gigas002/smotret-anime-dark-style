@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.24
+@version     1.3.25
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -177,7 +177,8 @@
     .m-pop-box h3,
     .m-comment-author-name,
     .m-sync-row-title
-    .m-new-episodes__empty {
+    .m-new-episodes__empty,
+    .btn {
         color: var(--text-color-title) !important;
     }
     
@@ -241,7 +242,10 @@
     .md-autocomplete-suggestions-container li,
     .qq-upload-list li.qq-upload-success,
     .qq-upload-list li,
-    .m-sync-row-status {
+    .m-sync-row-status,
+    .cdn-diagnostic .diag-progress,
+    .cdn-diagnostic .diag-row-reference td,
+    .cdn-diagnostic .diag-mbit {
         color: var(--text-color-gray) !important;
     }
     
@@ -270,7 +274,10 @@
     .switch_label_off,
     .switch_label_on,
     .caret,
-    .empty {
+    .empty,
+    .cdn-diagnostic .diag-report-inline,
+    .cdn-diagnostic .diag-desc,
+    .cdn-diagnostic .diag-ref-note {
         color: var(--text-color-minor) !important;
     }
     
@@ -408,7 +415,9 @@
     }
 
     thead,
-    table.striped > tbody > tr:nth-child(2n+1) {
+    table.striped > tbody > tr:nth-child(2n+1),
+    .cdn-diagnostic .diag-row-recommended td, 
+    .cdn-diagnostic .diag-row-reference td {
         background-color: var(--hover-04ev)
     }
     
@@ -455,8 +464,27 @@
     md-progress-linear.md-default-theme ._md-container,
     md-progress-linear ._md-container,
     .qq-uploader,
-    .qq-upload{
+    .qq-upload,
+    .btn {
         background-color: var(--color-08ev) !important;
+    }
+    
+    .btn-flat.disabled,
+    .btn-flat:disabled,
+    .btn-flat[disabled],
+    .btn-floating.disabled,
+    .btn-floating:disabled,
+    .btn-floating[disabled],
+    .btn-large.disabled,
+    .btn-large:disabled,
+    .btn-large[disabled],
+    .btn.disabled,
+    .btn:disabled,
+    .btn[disabled],
+    .disabled.btn-large,
+    [disabled].btn-large {
+        background-color: var(--color-02ev) !important;
+        color: var(--text-color-minor) !important;
     }
 
     .dropdown-content li:hover, 
@@ -505,7 +533,8 @@
     .m-block-title a.btn:hover,
     .green.darken-4:hover,
     #login-form>div>div>a:hover,
-    .qq-upload-button.green.darken-4 {
+    .qq-upload-button.green.darken-4,
+    .btn:hover {
         background-color: var(--hover-08ev) !important;
     }
     
@@ -658,5 +687,25 @@
     
     .collection .collection-item.avatar .title {
         font-size: 14px;
+    }
+    
+    .diag-table th,
+    .cdn-diagnostic .diag-report-inline,
+    .cdn-diagnostic .diag-badge,
+    .cdn-diagnostic .diag-recommend {
+        font-weight: 500; 
+    }
+    
+    .diag-badge[style*="#7cb342"],
+    .diag-badge[style*="#43a047"] {
+        background-color: var(--text-color-green) !important; 
+    }
+    
+    .diag-badge[style*="#e53935"] {
+        background-color: var(--text-color-red) !important;
+    }
+    
+    .cdn-diagnostic .diag-badge {
+        color: #000 !important
     }
 }

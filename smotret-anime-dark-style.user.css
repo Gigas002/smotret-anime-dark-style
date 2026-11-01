@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        smotret-anime-dark-style
 @namespace   Gigas002
-@version     1.3.25
+@version     1.3.26
 @homepageURL https://github.com/Gigas002/smotret-anime-dark-style
 @supportURL  https://github.com/Gigas002/smotret-anime-dark-style/issues
 @license     WTFPL (http://www.wtfpl.net/)
@@ -706,6 +706,63 @@
     }
     
     .cdn-diagnostic .diag-badge {
-        color: #000 !important
+        color: #000 !important;
+    }
+    
+    .subscription-sale-offer {
+        background-color: var(--color-04-ev) !important;
+    }
+    
+    .subscription-sale-poster {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+    
+    .subscription-sale-offer .subscription-sale-poster .subscription-sale-poster-note,
+    .subscription-sale-offer .subscription-sale-poster .subscription-sale-deadline {
+        color: #fff !important;
+    }
+    
+    .subscription-sale-banner .card-content .subscription-sale-invite {
+        border-top-color: transparent;
+    }
+    
+    .support-subscription-offer {
+        border-color: transparent;
+    }
+    
+    .subscription-sale-price,
+    .subscription-sale-duration {
+        color: var(--text-color-title);
+    }
+    
+    .subscription-sale-future del {
+        color: var(--text-color-gray);
+        text-decoration-color: #fff;
+    }
+    
+    .subscription-sale-offer .subscription-sale-selection .subscription-sale-renewal {
+        border-top-color: var(--text-color-gray);
+    }
+    
+    .subscription-sale-close {
+        color: var(--text-color-gray);
+    }
+    
+    .subscription-sale-close:focus,
+    .subscription-sale-close:focus-visible,
+    .subscription-sale-close:active {
+        background-color: var(--hover-08ev) !important;
+    }
+    
+    .subscription-sale-close:focus-visible {
+        background-color: transparent;
+        outline-color: transparent;
+        color: var(--text-color-gray);
+    }
+    
+    .subscription-sale-close:hover {
+        background-color: var(--color-08ev);
+        color: var(--text-color-gray);
     }
 }
